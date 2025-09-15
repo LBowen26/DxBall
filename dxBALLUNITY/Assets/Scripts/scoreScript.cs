@@ -14,7 +14,7 @@ public class scoreScript : MonoBehaviour
         {
             score = score + input;
             scoreText.text = score.ToString() + "Points";
-            if (score == 1)
+            if (score == 5)
             { // for testing purpose
                 winText.text = "You Win!";
                 ball.SetActive(false);

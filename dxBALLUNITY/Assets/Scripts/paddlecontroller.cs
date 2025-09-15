@@ -1,14 +1,15 @@
 using UnityEngine;
-
-public class paddlecontroller : MonoBehaviour
+public class PaddleController : MonoBehaviour
 {
+
     Rigidbody2D pad;
     Vector2 initial;
     public float displacement;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pad = GetComponent<Rigidbody2D>();
+      pad = GetComponent<Rigidbody2D>();
         initial = pad.transform.localPosition;
         
     }
@@ -17,14 +18,13 @@ public class paddlecontroller : MonoBehaviour
     void Update()
     {
         if ((Input.GetKey(KeyCode.RightArrow))){
-            if (initial.x<=9.75)
-            initial.x=initial.x+displacement;
-    }
-    else if((Input.GetKey(KeyCode.LeftArrow))){
-        if (initial.x>-9.75)
-        initial.x=initial.x-displacement;
-        }
+            if (initial.x<9.75)
+                initial.x=initial.x+displacement;
+            }
+        else if((Input.GetKey(KeyCode.LeftArrow))){
+            if (initial.x>-9.75)
+                initial.x=initial.x-displacement;
+            }
         pad.MovePosition(initial);
-        
     }
 }

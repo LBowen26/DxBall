@@ -35,9 +35,9 @@ public class ball : MonoBehaviour
         }
         if (collison.gameObject.CompareTag("paddle"))
             direction.y = -direction.y;
-        else if (collison.gameObject.CompareTag("sideWall"))
+        else if (collison.gameObject.CompareTag("sidewall"))
             direction.x = -direction.x;
-        else if (collison.gameObject.CompareTag("topWall"))
+        else if (collison.gameObject.CompareTag("topwall"))
             direction.y = -direction.y;
         else if (collison.gameObject.CompareTag("bottomWall"))
             {
